@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankar Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="buttons">
+        <button onclick="showtoast(succesMsg)">Submit</button>
+        <button onclick="showtoast(errorMsg)">error</button>
+        <button onclick="showtoast(invalidMsg)">involid</button>
+    </div>
+
+    <div id="toastbox"></div>
+
+</body>
+
+<script>
+
+    let succesMsg = '<i class="fa-regular fa-circle-check"></i> Succesfully Submitted'
+    let errorMsg = '<i class="fa-solid fa-circle-xmark"></i> Please fix the error!'
+    let invalidMsg = `<i class="fa-solid fa-circle-exclamation"></i> Invalid input check again`
+    let toastbox = document.getElementById("toastbox")
+
+    function showtoast(mssg) {
+        // console.log(succesMsg);
+        let toast = document.createElement('div')
+        toast.classList.add('toast')
+        toast.innerHTML = mssg
+        // console.log(toast);
+        toastbox.appendChild(toast)
+
+        
+        if (mssg.includes('invalid')) {
+            toast.classList.add('invalid')
+        }
+
+        if (mssg.includes('error')) {
+            toast.classList.add('error')
+            
+        }
+
+        setTimeout( () => {
+            toast.remove()
+        },6000)
+
+    }
+
+
+</script>
+
+</html>

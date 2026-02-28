@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(249, 249, 249);
+}
+
+.buttons {
+    margin: 50px 30px;
+}
+
+.buttons button {
+    background-color: rgb(124, 120, 120);
+    width: 80px;
+    color: white;
+    height: 40px;
+    margin: 5px;
+    border: 0;
+    font-weight: 550;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#toastbox {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.toast {
+    width: 400px;
+    height: 80px;
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    display: flex;
+    align-items: center;
+}
+
+.toast i {
+    font-size: 30px;
+    margin: 0 20px;
+    color: green;
+}
+
+/* .toast.invalid i{
+    color: orange;
+    } */
+
+.toast i.fa-circle-exclamation {
+    color: orange;
+}
+
+.toast.error i {
+    color: red;
+}
