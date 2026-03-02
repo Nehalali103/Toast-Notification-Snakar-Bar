@@ -51,7 +51,7 @@ body {
 
 @keyframes moveleft{
     100%{
-        transform: translate(0);
+        transform: translateX(0);
     }
 }
 
