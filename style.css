@@ -45,6 +45,14 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    transform: translate(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft{
+    100%{
+        transform: translate(0);
+    }
 }
 
 .toast i {
@@ -88,4 +96,17 @@ body {
 
 .toast.invalid::after {
     background-color: orange;
+}
+
+@media screen and (min-width:200px) and (max-width:575px)  {
+    .toast{
+        width: 325px;
+    }   
+
+    
+#toastbox {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
 }
